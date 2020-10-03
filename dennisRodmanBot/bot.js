@@ -1,77 +1,77 @@
-var Discord = require("discord.io");
-var logger = require("winston");
-var auth = require("./auth/auth");
+var Discord = require('discord.io');
+var logger = require('winston');
+var auth = require('../auth/dennisauth');
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console(), {
   colorize: true,
 });
-logger.level = "debug";
+logger.level = 'debug';
 // Initialize Discord Bot
 var bot = new Discord.Client({
   token: auth.token,
   autorun: true,
 });
-bot.on("ready", function (evt) {
-  logger.info("Connected");
-  logger.info("Logged in as: ");
-  logger.info(bot.username + " - (" + bot.id + ")");
+bot.on('ready', function (evt) {
+  logger.info('Connected');
+  logger.info('Logged in as: ');
+  logger.info(bot.username + ' - (' + bot.id + ')');
 });
-bot.on("message", function (user, userID, channelID, message, evt) {
+bot.on('message', function (user, userID, channelID, message, evt) {
   // Our bot needs to know if it will execute a command
   // It will listen for messages that will start with `!`
-  if (message.substring(0, 1) == "!") {
-    var args = message.substring(1).split(" ");
+  if (message.substring(0, 1) == '!') {
+    var args = message.substring(1).split(' ');
     var cmd = args[0];
 
     args = args.splice(1);
     switch (cmd) {
       // !ping
-      case "command":
+      case 'command':
         bot.sendMessage({
           to: channelID,
-          message: "Date ban lec tut",
+          message: 'Date ban lec tut',
         });
         break;
-      case "date":
+      case 'date':
         bot.sendMessage({
           to: channelID,
-          message: "wrong , try !command",
+          message: 'wrong , try !command',
         });
         break;
-      case "lec":
+      case 'lec':
         bot.sendMessage({
           to: channelID,
-          message: "https://concordia-ca.zoom.us/j/4371395259",
+          message: 'https://concordia-ca.zoom.us/j/4371395259',
         });
         break;
-      case "tut":
+      case 'tut':
         bot.sendMessage({
           to: channelID,
-          message: "932 424 8186",
+          message: '932 424 8186',
         });
         break;
-      case "Date":
+      case 'Date':
         bot.sendMessage({
           to: channelID,
           message:
-            "October 9: Assignment 2\nOctober 19: Assignment 2 Due\nOctober 20: Quiz 2\nOctober 29: Midterm\nNovember 10: Quiz 3\nNovember 13: Assignment 3\nNovember 23: Assignment 3 Due\nNovember 24: Quiz 4\n",
+            'October 9: Assignment 2\nOctober 19: Assignment 2 Due\nOctober 20: Quiz 2\nOctober 29: Midterm\nNovember 10: Quiz 3\nNovember 13: Assignment 3\nNovember 23: Assignment 3 Due\nNovember 24: Quiz 4\n',
         });
         break;
       // Just add any case commands if you want to..
     }
   }
-  if (message.substring(0, 1) == "?") {
-    var args = message.substring(1).split(" ");
+  if (message.substring(0, 1) == '?') {
+    var args = message.substring(1).split(' ');
     var cmd = args[0];
 
     args = args.splice(1);
     switch (cmd) {
       // !ping
-      case "trivia":
+      case 'trivia':
         bot.sendMessage({
           to: channelID,
-          message: "Initialized",
+          message: 'Initialized',
         });
 
       // Just add any case commands if you want to..
