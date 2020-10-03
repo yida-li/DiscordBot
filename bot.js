@@ -27,16 +27,35 @@ bot.on("message", function (user, userID, channelID, message, evt) {
     args = args.splice(1);
     switch (cmd) {
       // !ping
-      case "ping":
+      case "command":
         bot.sendMessage({
           to: channelID,
-          message: "Pong!",
+          message: "Date ban lec tut",
         });
+        break;
       case "date":
         bot.sendMessage({
           to: channelID,
+          message: "wrong , try !command",
+        });
+        break;
+      case "lec":
+        bot.sendMessage({
+          to: channelID,
+          message: "https://concordia-ca.zoom.us/j/4371395259",
+        });
+        break;
+      case "tut":
+        bot.sendMessage({
+          to: channelID,
+          message: "932 424 8186",
+        });
+        break;
+      case "Date":
+        bot.sendMessage({
+          to: channelID,
           message:
-            "October 9: Assignment 2\nOctober 20: Quiz 2\nOctober 29: Midterm\nNovember 10: Quiz 3\nNovember 13: Assignment 3\nNovember 24: Quiz 4\n",
+            "October 9: Assignment 2\nOctober 19: Assignment 2 Due\nOctober 20: Quiz 2\nOctober 29: Midterm\nNovember 10: Quiz 3\nNovember 13: Assignment 3\nNovember 23: Assignment 3 Due\nNovember 24: Quiz 4\n",
         });
         break;
       // Just add any case commands if you want to..
