@@ -18,6 +18,7 @@
   "homepage": "https://github.com/yida-li/DiscordBot#readme",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "dotenv": "^8.2.0",
     "winston": "^3.3.3"
   }
 }
