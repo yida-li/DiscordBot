@@ -37,7 +37,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
       case 'date':
         bot.sendMessage({
           to: channelID,
-          message: 'wrong , try !command',
+          message: 'insert prama->(timezone.time)',
         });
         break;
       case 'lec':
@@ -55,8 +55,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
       case 'Date':
         bot.sendMessage({
           to: channelID,
-          message:
-            'October 9: Assignment 2\nOctober 19: Assignment 2 Due\nOctober 20: Quiz 2\nOctober 29: Midterm\nNovember 10: Quiz 3\nNovember 13: Assignment 3\nNovember 23: Assignment 3 Due\nNovember 24: Quiz 4\n',
+          message:'Assignment 3: Due wedneday 25 \nQuiz 4 : thursday 26',
         });
         break;
       // Just add any case commands if you want to..
