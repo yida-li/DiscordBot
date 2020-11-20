@@ -78,3 +78,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     }
   }
 });
+
+
+
+
+
+
+
+ //// //// ///  https://github.com/yida-li/DiscordBot ///  //// ////
