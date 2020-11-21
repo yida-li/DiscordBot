@@ -11,6 +11,10 @@
 
 
 
+# Documentation
+
+https://izy521.gitbooks.io/discord-io/content/Methods/
+
 
 
 # Edit this page 
