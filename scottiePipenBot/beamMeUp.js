@@ -37,7 +37,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
       case 'date':
         bot.sendMessage({
           to: channelID,
-          message: '',
+          message: 'Assignment 3 Due : November 25th',
         });
         break;
         case 'github':
@@ -58,7 +58,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
       case 'tut':
         bot.sendMessage({
           to: channelID,
-          message: 'https://concordia-ca.zoom.us/w/99722964177?tk=ULk4H_SKD3Q3DjbkjalxHikBjGAcsLgt8rAKDaiFjPc.DQIAAAAXN_Os0RZTOGJqbFJXTVQ5cTlDandSNWFiWlhBAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+          message: 'UB :https://concordia-ca.zoom.us/w/99722964177?tk=ULk4H_SKD3Q3DjbkjalxHikBjGAcsLgt8rAKDaiFjPc.DQIAAAAXN_Os0RZTOGJqbFJXTVQ5cTlDandSNWFiWlhBAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n UA:91293258408\n UC:94856815682',
         });
         break;
      
