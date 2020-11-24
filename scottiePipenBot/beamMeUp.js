@@ -31,7 +31,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
       case 'command':
         bot.sendMessage({
           to: channelID,
-          message: ' writing infinity in the palm of your hand, and eternity in an hour',
+          message: 'date lec github tut',
         });
         break;
       case 'date':
@@ -40,19 +40,28 @@ bot.on('message', function (user, userID, channelID, message, evt) {
           message: '',
         });
         break;
+        case 'github':
+          bot.sendMessage({
+            to: channelID,
+            message: 'https://github.com/Xilinx/embeddedsw/tree/master/XilinxProcessorIPLib/drivers/uartlite',
+          });
+          break;
+
+        
+
       case 'lec':
         bot.sendMessage({
           to: channelID,
-          message: '',
+          message: 'maybe 94583822067',
         });
         break;
       case 'tut':
         bot.sendMessage({
           to: channelID,
-          message: '',
+          message: 'https://concordia-ca.zoom.us/w/99722964177?tk=ULk4H_SKD3Q3DjbkjalxHikBjGAcsLgt8rAKDaiFjPc.DQIAAAAXN_Os0RZTOGJqbFJXTVQ5cTlDandSNWFiWlhBAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
         });
         break;
-      
+     
       // Just add any case commands if you want to..
     }
   }
@@ -73,8 +82,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     }
   }
 });
-
-
 
 
 
