@@ -5,6 +5,10 @@ secret/
 token/
 private_modules/
 
+# private bots
+
+durant/
+
 # testing
 /coverage
 

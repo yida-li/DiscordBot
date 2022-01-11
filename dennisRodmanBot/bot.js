@@ -1,88 +1,46 @@
-var Discord = require('discord.io');
-var logger = require('winston');
-var auth = require('../auth/dennisauth');
+const Discord = require("discord.js")
 
-// Configure logger settings
-logger.remove(logger.transports.Console);
-logger.add(new logger.transports.Console(), {
-  colorize: true,
-});
-logger.level = 'debug';
-// Initialize Discord Bot
-var bot = new Discord.Client({
-  token: auth.token,
-  autorun: true,
-});
-bot.on('ready', function (evt) {
-  logger.info('Connected');
-  logger.info('Logged in as: ');
-  logger.info(bot.username + ' - (' + bot.id + ')');
-});
-bot.on('message', function (user, userID, channelID, message, evt) {
-  // Our bot needs to know if it will execute a command
-  // It will listen for messages that will start with `!`
-  if (message.substring(0, 1) == '!') {
-    var args = message.substring(1).split(' ');
-    var cmd = args[0];
+var auth = require('../auth/bulls');
+const client = new Discord.Client({
+    intents:["GUILDS",
+    "GUILD_MESSAGES"]
+})
+client.on("read",()=>{ console.log(`Logged in as ${client.user.tag}`)})
 
-    args = args.splice(1);
-    switch (cmd) {
-      // !ping
-      case 'command':
-        bot.sendMessage({
-          to: channelID,
-          message: 'Date ban lec tut',
-        });
-        break;
-      case 'date':
-        bot.sendMessage({
-          to: channelID,
-          message: 'insert prama->(timezone.time)',
-        });
-        break;
-      case 'lec':
-        bot.sendMessage({
-          to: channelID,
-          message: 'https://concordia-ca.zoom.us/j/4371395259',
-        });
-        break;
-      case 'tut':
-        bot.sendMessage({
-          to: channelID,
-          message: '932 424 8186',
-        });
-        break;
-      case 'Date':
-        bot.sendMessage({
-          to: channelID,
-          message:'Assignment 3: Due wedneday 25 \nQuiz 4 : thursday 26',
-        });
-        break;
-      // Just add any case commands if you want to..
+client.on("messageCreate",(message)=>{
+
+    if(message.content=="!command"){
+        message.reply("!link !midterm !final !tutmonday !tutwednesday !tutfriday")
     }
-  }
-  if (message.substring(0, 1) == '?') {
-    var args = message.substring(1).split(' ');
-    var cmd = args[0];
-
-    args = args.splice(1);
-    switch (cmd) {
-      // !ping
-      case 'trivia':
-        bot.sendMessage({
-          to: channelID,
-          message: 'Initialized',
-        });
-
-      // Just add any case commands if you want to..
+    if(message.content=="!link"){
+        message.reply("https://concordia-ca.zoom.us/j/86955612783#success")
     }
-  }
-});
+    if(message.content=="!midterm"){
+        message.reply("Feb 3/ March 15")
+    }
+    if(message.content=="!final"){
+        message.reply("April 31")
+    }
+    if(message.content=="!tutmonday"){
+        message.reply("https://concordia-ca.zoom.us/s/8317684339")
+    }
+    if(message.content=="!tutwednesday"){
+        message.reply("https://concordia-ca.zoom.us/s/8317684339")
+    }
+    if(message.content=="!tutfriday"){
+        message.reply("https://concordia-ca.zoom.us/j/81069305289")
+    }
+})
+client.login(auth.token)
 
-
-
-
-
-
-
- //// //// ///  https://github.com/yida-li/DiscordBot ///  //// ////
+exec(
+    'node ../YIDABOT/dennisRodmanBot/bot.js',
+    (error, stdout, stderr) => {
+      if (error) {
+        console.error(`exec error: ${error}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+      console.error(`stderr: ${stderr}`);
+    }
+  );
