@@ -22,7 +22,8 @@ client.on("messageCreate",(message)=>{
         message.reply("https://concordia-ca.zoom.us/j/86955612783#success")
     }
     if(message.content=="!coen448"){
-        message.reply("lecture:https://concordia-ca.zoom.us/j/8639387838")
+        message.reply("lecture:\n https://concordia-ca.zoom.us/j/8639387838")
+        message.reply("lab: https://concordia-ca.zoom.us/j/84911178054?pwd=NkZiSzlsM0YvY3BFQ0hCU3BsWmhDdz09")
     }
     if(message.content=="!coen490"){
         message.reply("https://concordia-ca.zoom.us/j/86955612783#success")
