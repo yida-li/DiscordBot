@@ -33,14 +33,3 @@ client.on("messageCreate",(message)=>{
 })
 client.login(auth.token)
 
-exec(
-    'node ../YIDABOT/dennisRodmanBot/bot.js',
-    (error, stdout, stderr) => {
-      if (error) {
-        console.error(`exec error: ${error}`);
-        return;
-      }
-      console.log(`stdout: ${stdout}`);
-      console.error(`stderr: ${stderr}`);
-    }
-  );

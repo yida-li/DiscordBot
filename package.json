@@ -1,17 +1,21 @@
 {
-  "name": "temp",
+  "name": "dennis bot",
   "version": "1.0.0",
-  "description": "",
-  "main": "bot.js",
+  "description": "bot that hopefully lives forever on heroku.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "yida li",
+  "license": "MIT",
   "dependencies": {
-    "discord.io": "^2.5.3",
-    "discord.js": "^13.5.1",
-    "exec": "^0.2.1",
-    "winston": "^3.4.0"
+    "discord.js": "^13.5.1"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }

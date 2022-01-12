@@ -3,12 +3,8 @@ node_modules/
 auth/
 secret/
 token/
-private_modules/
-
-# private bots
-
-durant/
-
+herokuSteps/
+package-lock.json
 # testing
 /coverage
 
