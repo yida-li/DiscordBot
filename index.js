@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-const {MessageAttachment} = require("discord.js")
+const { MessageEmbed } = require('discord.js');
 const token = process.env.token;
 const client = new Discord.Client({
     intents:["GUILDS",
@@ -10,7 +10,7 @@ client.on("read",()=>{ console.log(`Logged in as ${client.user.tag}`)})
 client.on("messageCreate",(message)=>{
     
     if(message.content=="!command"){
-        message.reply("!link !image !elecmidterm !final !coen366 !elec311 !elecdate !coen448 !coen490 !engl233")
+        message.reply("!link !elecmidterm !final !coen366 !elec311 !elecdate !elechomework !coen448 !coen490 !engl233")
     }
     if(message.content=="!link"){
         message.reply("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley&t=43s")
@@ -35,14 +35,15 @@ client.on("messageCreate",(message)=>{
         message.reply("https://concordia-ca.zoom.us/j/84872995940")
     }
     if(message.content=="!elecdate"){
-        message.reply("Jan 18 : Workshop\n Jan 31 : Homework\nFebr 1 : Workshop\nFeb 3 : Midterm 1 \nFeb 14 : Homework \nFeb 22 : Workshop \nMarch 7 : Homework \nMarch 10 : Workshop\nMarch 15 : Midterm 2 \nMarch 22 : Workshop\nApril 4 :Homework\nApril 5 : Workshop")
+        message.reply("Jan 18 : Workshop\nJan 31 : Homework\nFebr 1 : Workshop\nFeb 3 : Midterm 1 \nFeb 14 : Homework \nFeb 22 : Workshop \nMarch 7 : Homework \nMarch 10 : Workshop\nMarch 15 : Midterm 2 \nMarch 22 : Workshop\nApril 4 :Homework\nApril 5 : Workshop")
     }
     if(message.content=="!final"){
         message.reply("April 31")
     }
-    if(message.content=="!image"){
-        const feelings = new MessageAttachment('test.png')
-        message.reply("here",feelings)
+    if(message.content=="!elechomework"){
+    
+        const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s1.png');
+        message.channel.send({ embeds: [embed], files: ['./s1.png'] });
     }
     if(message.content=="!nap"){
         exec.kill('SIGINT');

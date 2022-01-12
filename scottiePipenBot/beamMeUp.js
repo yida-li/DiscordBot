@@ -1,5 +1,6 @@
 const Discord = require("discord.js")
 const exec  = require('child_process').exec;
+const { MessageEmbed } = require('discord.js');
 var auth = require('../auth/bulls');
 const client = new Discord.Client({
     intents:["GUILDS",
@@ -10,13 +11,16 @@ client.on("read",()=>{ console.log(`Logged in as ${client.user.tag}`)})
 client.on("messageCreate",(message)=>{
     const exec  = require('child_process').exec;
     if(message.content=="!command"){
-        message.reply("!link !midterm !sleep !version")
+        message.reply("!link !image !midterm !sleep !version")
     }
     if(message.content=="!link"){
         message.reply("https://concordia-ca.zoom.us/j/86955612783#success")
     }
-    if(message.content=="!midterm"){
-        message.reply("Feb 3/ March 15")
+    if(message.content=="!image2"){
+        
+
+        const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://test.png');
+        message.channel.send({ embeds: [embed], files: ['./test.png'] });
     }
     if(message.content=="!sleep"){
       exec.kill('SIGINT');
