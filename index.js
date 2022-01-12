@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-
+const {MessageAttachment} = require("discord.js")
 const token = process.env.token;
 const client = new Discord.Client({
     intents:["GUILDS",
@@ -10,20 +10,23 @@ client.on("read",()=>{ console.log(`Logged in as ${client.user.tag}`)})
 client.on("messageCreate",(message)=>{
     
     if(message.content=="!command"){
-        message.reply("!link !elecmidterm !final !tutmonday !tutwednesday !tutfriday !coen366 !elec311 !coen448 !coen490 !engl233")
+        message.reply("!link !image !elecmidterm !final !coen366 !elec311 !elecdate !coen448 !coen490 !engl233")
     }
     if(message.content=="!link"){
-        message.reply("")
+        message.reply("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley&t=43s")
     }
     if(message.content=="!coen366"){
-        message.reply("https://concordia-ca.zoom.us/j/85484966161?pwd=T3NndStaY2FkQkduQlozWmJzOE1aQT09")
+        message.reply("lecture:\nhttps://concordia-ca.zoom.us/j/85484966161?pwd=T3NndStaY2FkQkduQlozWmJzOE1aQT09")
     }
     if(message.content=="!elec311"){
-        message.reply("https://concordia-ca.zoom.us/j/86955612783#success")
+        message.reply("lecture:\nhttps://concordia-ca.zoom.us/j/86955612783")
+        message.reply("monday tut:\nhttps://concordia-ca.zoom.us/s/8317684339")
+        message.reply("wednesday tut:\nhttps://concordia-ca.zoom.us/s/8317684339")
+        message.reply("friday tut:\nhttps://concordia-ca.zoom.us/j/81069305289")                
     }
     if(message.content=="!coen448"){
         message.reply("lecture:\n https://concordia-ca.zoom.us/j/8639387838")
-        message.reply("lab: https://concordia-ca.zoom.us/j/84911178054?pwd=NkZiSzlsM0YvY3BFQ0hCU3BsWmhDdz09")
+        message.reply("lab:\n https://concordia-ca.zoom.us/j/84911178054?pwd=NkZiSzlsM0YvY3BFQ0hCU3BsWmhDdz09")
     }
     if(message.content=="!coen490"){
         message.reply("https://concordia-ca.zoom.us/j/86955612783#success")
@@ -31,20 +34,15 @@ client.on("messageCreate",(message)=>{
     if(message.content=="!engl233"){
         message.reply("https://concordia-ca.zoom.us/j/84872995940")
     }
-    if(message.content=="!elecmidterm"){
-        message.reply("Feb 3/ March 15")
+    if(message.content=="!elecdate"){
+        message.reply("Jan 18 : Workshop\n Jan 31 : Homework\nFebr 1 : Workshop\nFeb 3 : Midterm 1 \nFeb 14 : Homework \nFeb 22 : Workshop \nMarch 7 : Homework \nMarch 10 : Workshop\nMarch 15 : Midterm 2 \nMarch 22 : Workshop\nApril 4 :Homework\nApril 5 : Workshop")
     }
     if(message.content=="!final"){
         message.reply("April 31")
     }
-    if(message.content=="!tutmonday"){
-        message.reply("https://concordia-ca.zoom.us/s/8317684339")
-    }
-    if(message.content=="!tutwednesday"){
-        message.reply("https://concordia-ca.zoom.us/s/8317684339")
-    }
-    if(message.content=="!tutfriday"){
-        message.reply("https://concordia-ca.zoom.us/j/81069305289")
+    if(message.content=="!image"){
+        const feelings = new MessageAttachment('test.png')
+        message.reply("here",feelings)
     }
     if(message.content=="!nap"){
         exec.kill('SIGINT');
