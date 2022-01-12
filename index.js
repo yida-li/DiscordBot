@@ -10,7 +10,7 @@ client.on("read",()=>{ console.log(`Logged in as ${client.user.tag}`)})
 client.on("messageCreate",(message)=>{
     
     if(message.content=="!command"){
-        message.reply("!link !elecmidterm !final !coen366 !elec311 !elecdate !elechomework !coen448 !coen490 !engl233")
+        message.reply("!link !quote !elecmidterm !final !coen366 !elec311 !elecdate !elechomework !coen448 !coen490 !engl233")
     }
     if(message.content=="!link"){
         message.reply("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley&t=43s")
@@ -33,6 +33,33 @@ client.on("messageCreate",(message)=>{
     }
     if(message.content=="!engl233"){
         message.reply("https://concordia-ca.zoom.us/j/84872995940")
+    }
+    if(message.content=="!quote"){
+        let x = Math.floor(Math.random() * 8);
+        if (x==0){
+            message.reply("Sometimes, to save someone, you must fight them.")
+        }
+        if(x==1){
+            message.reply("A gem cannot be polished without friction, nor a man perfected without trials.")
+        }
+        if(x==2){
+            message.reply("The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.")
+        }
+        if(x==3){
+            message.reply("There are three basic types, Mr. Pizer: the Wills, the Won'ts, and the Can'ts. The Wills accomplish everything, the Won'ts oppose everything, and the Can'ts won't try anything.")
+        }
+        if(x==4){
+            message.reply("Thus, a good man, though a slave, is free; but a wicked man, though a king, is a slave. For he serves, not one man alone, but what is worse, as many masters as he has vices.")
+        }
+        if(x==5){
+            message.reply("Each of us lives, dependent, and bound by our individual knowledge and our awareness. All that is what we call reality. However, both knowledge and awareness are equivocal. One’s reality might be another’s illusion. We all live inside our own fantasies")
+        }
+        if(x==6){
+            message.reply("We are never so defenseless against suffering as when we love")
+        }
+        else{
+            message.reply("The unexamined life is not worth living")
+        }
     }
     if(message.content=="!elecdate"){
         message.reply("Jan 18 : Workshop\nJan 31 : Homework\nFebr 1 : Workshop\nFeb 3 : Midterm 1 \nFeb 14 : Homework \nFeb 22 : Workshop \nMarch 7 : Homework \nMarch 10 : Workshop\nMarch 15 : Midterm 2 \nMarch 22 : Workshop\nApril 4 :Homework\nApril 5 : Workshop")
