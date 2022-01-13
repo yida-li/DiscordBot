@@ -17,6 +17,8 @@ client.on("messageCreate",(message)=>{
     }
     if(message.content=="!coen366"){
         message.reply("lecture:\nhttps://concordia-ca.zoom.us/j/85484966161?pwd=T3NndStaY2FkQkduQlozWmJzOE1aQT09")
+        message.reply("wednesday lab:\nhttps://concordia-ca.zoom.us/my/mohamad.al.adraa")
+        message.reply("thusday lab:\nhttps://concordia-ca.zoom.us/my/shreyakhisa")
     }
     if(message.content=="!elec311"){
         message.reply("lecture:\nhttps://concordia-ca.zoom.us/j/86955612783")
