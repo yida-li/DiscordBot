@@ -10,9 +10,9 @@ client.on("read",()=>{ console.log(`Logged in as ${client.user.tag}`)})
 client.on("messageCreate",(message)=>{
     
     if(message.content=="!command"){
-        message.reply("!link !quote !elecmidterm !final !coen366 !elec311 !elecdate !elechomework !coen448 !coen490 !engl233")
+        message.reply("!quote !elecmidterm !coen366 !elec311 !elecdate !elechomework !coen448 !coen490 !engl233 !schedule")
     }
-    if(message.content=="!link"){
+    if(message.content=="!troll"){
         message.reply("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley&t=43s")
     }
     if(message.content=="!coen366"){
@@ -28,10 +28,11 @@ client.on("messageCreate",(message)=>{
     }
     if(message.content=="!coen448"){
         message.reply("lecture:\n https://concordia-ca.zoom.us/j/8639387838")
-        message.reply("lab:\n https://concordia-ca.zoom.us/j/84911178054?pwd=NkZiSzlsM0YvY3BFQ0hCU3BsWmhDdz09")
+        message.reply("lab mon + tut :\n https://concordia-ca.zoom.us/j/84911178054?pwd=NkZiSzlsM0YvY3BFQ0hCU3BsWmhDdz09")
+        message.reply("lab non-monday:\n https://concordia-ca.zoom.us/j/84918786624?pwd=YmtWMHNlcnQ0ZVpkZjJMR0RGU1Iydz09")
     }
     if(message.content=="!coen490"){
-        message.reply("https://concordia-ca.zoom.us/j/86955612783#success")
+        message.reply("https://concordia-ca.zoom.us/j/87665129256#success")
     }
     if(message.content=="!engl233"){
         message.reply("https://concordia-ca.zoom.us/j/84872995940")
@@ -78,13 +79,15 @@ client.on("messageCreate",(message)=>{
     if(message.content=="!elecdate"){
         message.reply("Jan 18 : Workshop\nJan 31 : Homework\nFebr 1 : Workshop\nFeb 3 : Midterm 1 \nFeb 14 : Homework \nFeb 22 : Workshop \nMarch 7 : Homework \nMarch 10 : Workshop\nMarch 15 : Midterm 2 \nMarch 22 : Workshop\nApril 4 :Homework\nApril 5 : Workshop")
     }
-    if(message.content=="!final"){
-        message.reply("April 31")
-    }
     if(message.content=="!elechomework"){
     
         const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s1.png');
         message.channel.send({ embeds: [embed], files: ['./s1.png'] });
+    }
+    if(message.content=="!schedule"){
+    
+        const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s2.png');
+        message.channel.send({ embeds: [embed], files: ['./s2.png'] });
     }
     if(message.content=="!nap"){
         exec.kill('SIGINT');
