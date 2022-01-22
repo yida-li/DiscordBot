@@ -104,10 +104,20 @@ client.on("messageCreate",(message)=>{
         const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s2.png');
         message.channel.send({ embeds: [embed], files: ['./s2.png'] });
     }
-    if(message.content=="!nobodychooseme"){
+    if(message.content=="!sad"){
     
         const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s3.jpg');
         message.channel.send({ embeds: [embed], files: ['./s3.jpg'] });
+    }
+    if(message.content=="!library"){
+    
+        const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s4.jpg');
+        message.channel.send({ embeds: [embed], files: ['./s4.jpg'] });
+    }
+    if(message.content=="!sus"){
+    
+        const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s5.jpg');
+        message.channel.send({ embeds: [embed], files: ['./s5.jpg'] });
     }
     if(message.content=="!nap"){
         exec.kill('SIGINT');
