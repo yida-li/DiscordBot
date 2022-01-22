@@ -38,7 +38,7 @@ client.on("messageCreate",(message)=>{
         message.reply("https://concordia-ca.zoom.us/j/84872995940")
     }
     if(message.content=="!quote"){
-        let x = Math.floor(Math.random() * 12);
+        let x = Math.floor(Math.random() * 16);
         if (x==0){
             message.reply("Sometimes, to save someone, you must fight them.")
         }
@@ -46,7 +46,7 @@ client.on("messageCreate",(message)=>{
             message.reply("A gem cannot be polished without friction, nor a man perfected without trials.")
         }
         else if(x==2){
-            message.reply("The best and most beautelse iful things in the world cannot be seen or even touched - they must be felt with the heart.")
+            message.reply("The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.")
         }
         else if(x==3){
             message.reply("There are three basic types, Mr. Pizer: the Wills, the Won'ts, and the Can'ts. The Wills accomplish everything, the Won'ts oppose everything, and the Can'ts won't try anything.")
@@ -67,10 +67,25 @@ client.on("messageCreate",(message)=>{
             message.reply("When you are right,you have no need to be angry. When you are wrong, you have no right to be angry.")
         }
         else if(x==9){
-            message.reply("We are never so defenseless against suffering as when we love.")
+            message.reply("To see the world in a silicon, and a heaven in a rose, holding infinities in the palms of your hand, an eternity in an hour and fifteen minutes.")
         }
         else if(x==10){
             message.reply("Those who know do not speak. Those who speak do not know.")
+        }
+        else if(x==11){
+            message.reply("To live life, is not to be on the side of the majority, but to escape finding oneself in the ranks of the insane.")
+        }
+        else if(x==12){
+            message.reply("Learn to recognize the counterfeit coins that may buy you just a single instance of pleasure, then drags you for days and nights, like a broken man behind a farting camel.")
+        }
+        else if(x==13){
+            message.reply("The first and best victory is to conquer one self, to be conquered by self is of all things, the most shameful and vile.")
+        }
+        else if(x==14){
+            message.reply("It was a great surprise to me when I discovered that most of the ugliness i saw in others, was but a reflection of my own nature.")
+        }
+        else if(x==15){
+            message.reply("Why did i spend years deliberately fooling myself by creating alibis, excuses, to cover up my weaknesses.If used differently, the same time would be sufficient to cure the weakness")
         }
         else{
             message.reply("The unexamined life is not worth living.")
@@ -88,6 +103,11 @@ client.on("messageCreate",(message)=>{
     
         const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s2.png');
         message.channel.send({ embeds: [embed], files: ['./s2.png'] });
+    }
+    if(message.content=="!nobodychooseme"){
+    
+        const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s3.jpg');
+        message.channel.send({ embeds: [embed], files: ['./s3.jpg'] });
     }
     if(message.content=="!nap"){
         exec.kill('SIGINT');
