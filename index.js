@@ -32,13 +32,13 @@ client.on("messageCreate",(message)=>{
         message.reply("lab non-monday:\n https://concordia-ca.zoom.us/j/84918786624?pwd=YmtWMHNlcnQ0ZVpkZjJMR0RGU1Iydz09")
     }
     if(message.content=="!coen490"){
-        message.reply("https://concordia-ca.zoom.us/j/87665129256#success")
+        message.reply("https://concordia-ca.zoom.us/j/87665129256")
     }
     if(message.content=="!engl233"){
         message.reply("https://concordia-ca.zoom.us/j/84872995940")
     }
     if(message.content=="!quote"){
-        let x = Math.floor(Math.random() * 16);
+        let x = Math.floor(Math.random() * 18);
         if (x==0){
             message.reply("Sometimes, to save someone, you must fight them.")
         }
@@ -87,6 +87,21 @@ client.on("messageCreate",(message)=>{
         else if(x==15){
             message.reply("Why did i spend years deliberately fooling myself by creating alibis, excuses, to cover up my weaknesses.If used differently, the same time would be sufficient to cure the weakness")
         }
+        else if(x==16){
+            message.reply("The man who lies to himself and listens to his own lie comes to a point that he cannot distinguish the truth within him, or around him, and so loses all respect for himself and for others. And having no respect he ceases to love.")
+        }
+        else if(x==17){
+            message.reply("If your hate could be turned into electricity, it would light up the whole world.")
+        }
+        else if(x==18){
+            message.reply("Is a leaf's only purpose to fall?.")
+        }
+        else if(x==18){
+            message.reply("Without music, life would be a mistake.")
+        }
+        else if(x==18){
+            message.reply("You must have chaos within you to give birth to a dancing star.")
+        }       
         else{
             message.reply("The unexamined life is not worth living.")
         }
@@ -109,12 +124,12 @@ client.on("messageCreate",(message)=>{
         const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s3.jpg');
         message.channel.send({ embeds: [embed], files: ['./s3.jpg'] });
     }
-    if(message.content=="!library"){
+    if(message.content=="!sus"){
     
         const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s4.jpg');
         message.channel.send({ embeds: [embed], files: ['./s4.jpg'] });
     }
-    if(message.content=="!sus"){
+    if(message.content=="!library"){
     
         const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s5.jpg');
         message.channel.send({ embeds: [embed], files: ['./s5.jpg'] });
