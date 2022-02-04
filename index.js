@@ -119,6 +119,20 @@ client.on("messageCreate",(message)=>{
         const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s2.png');
         message.channel.send({ embeds: [embed], files: ['./s2.png'] });
     }
+    if(message.content=="!lab"){
+    
+        const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s6.png');
+        message.channel.send({ embeds: [embed], files: ['./s6.png'] });
+    }
+    if(message.content=="!manual"){
+    
+        message.reply("https://users.encs.concordia.ca/~sqin/ELEC311/")
+    }
+    if(message.content=="!pod"){
+    
+        const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s7.png');
+        message.channel.send({ embeds: [embed], files: ['./s7.png'] });
+    }
     if(message.content=="!sad"){
     
         const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://s3.jpg');
