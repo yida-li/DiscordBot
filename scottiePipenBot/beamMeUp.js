@@ -8,32 +8,41 @@ const client = new Discord.Client({
 })
 client.on("read",()=>{ console.log(`Logged in as ${client.user.tag}`)})
 
+
+let counter = false
 client.on("messageCreate",(message)=>{
+    
     const exec  = require('child_process').exec;
     if(message.content=="!command"){
-        message.reply("!quote !image !midterm !sleep !version")
+        message.reply("!quote !image !midterm !sleep !versionssss")
     }
-    if(message.content=="!quote"){
+    if(message.content=="!wake"){
+        counter=true
+    }
+    if(message.content=="!sleep"){
+        counter=false
+    }
+    if(message.content=="!quote" && counter==true){
         let x = Math.floor(Math.random() * 8);
         if (x==0){
             message.reply("Sometimes, to save someone, you must fight them.")
         }
-        if(x==1){
+        else if(x==1){
             message.reply("A gem cannot be polished without friction, nor a man perfected without trials.")
         }
-        if(x==2){
+        else if(x==2){
             message.reply("The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.")
         }
-        if(x==3){
+        else if(x==3){
             message.reply("There are three basic types, Mr. Pizer: the Wills, the Won'ts, and the Can'ts. The Wills accomplish everything, the Won'ts oppose everything, and the Can'ts won't try anything.")
         }
-        if(x==4){
+        else if(x==4){
             message.reply("Thus, a good man, though a slave, is free; but a wicked man, though a king, is a slave. For he serves, not one man alone, but what is worse, as many masters as he has vices.")
         }
-        if(x==5){
+        else if(x==5){
             message.reply("Each of us lives, dependent, and bound by our individual knowledge and our awareness. All that is what we call reality. However, both knowledge and awareness are equivocal. One’s reality might be another’s illusion. We all live inside our own fantasies")
         }
-        if(x==6){
+        else if(x==6){
             message.reply("We are never so defenseless against suffering as when we love")
         }
         else{
@@ -45,9 +54,6 @@ client.on("messageCreate",(message)=>{
 
         const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://test.png');
         message.channel.send({ embeds: [embed], files: ['./test.png'] });
-    }
-    if(message.content=="!sleep"){
-      exec.kill('SIGINT');
     }
     if(message.content=="!version"){
       
