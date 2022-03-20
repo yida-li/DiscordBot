@@ -49,6 +49,28 @@ client.on("messageCreate",(message)=>{
             message.reply("The unexamined life is not worth living")
         }
     }
+    if(message.content=="!rolldice" && counter==true){
+        let x = Math.floor(Math.random() * 6);
+        if (x==0){
+            message.reply("You rolled a 1")
+        }
+        else if(x==1){
+            message.reply("you rolled a 2")
+        }
+        else if(x==2){
+            message.reply("you rolled a 3")
+        }
+        else if(x==3){
+            message.reply("you rolled a 4")
+        }
+        else if(x==4){
+            message.reply("you rolled a 5")
+        }
+        else{
+            message.reply("you rolled a 6")
+        }
+
+    }
     if(message.content=="!image2"){
         
 
@@ -71,6 +93,6 @@ client.on("messageCreate",(message)=>{
     }
 
 })
-client.login(auth.token2)
+client.login(auth.token)
 
 

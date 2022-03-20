@@ -45,8 +45,30 @@ client.on("messageCreate",(message)=>{
     if(message.content=="!engl233" && counter==true){
         message.reply("https://concordia-ca.zoom.us/j/84872995940")
     }
+    if(message.content=="!rolldice" && counter==true){
+        let x = Math.floor(Math.random() * 6);
+        if (x==0){
+            message.reply("You rolled a 1")
+        }
+        else if(x==1){
+            message.reply("you rolled a 2")
+        }
+        else if(x==2){
+            message.reply("you rolled a 3")
+        }
+        else if(x==3){
+            message.reply("you rolled a 4")
+        }
+        else if(x==4){
+            message.reply("you rolled a 5")
+        }
+        else{
+            message.reply("you rolled a 6")
+        }
+
+    }
     if(message.content=="!quote" && counter==true&& lock==true){
-        let x = Math.floor(Math.random() * 32);
+        let x = Math.floor(Math.random() * 38);
         if (x==0){
             message.reply("Sometimes, to save someone, you must fight them.")
         }
@@ -139,13 +161,31 @@ client.on("messageCreate",(message)=>{
         }     
         else if(x==30){
             message.reply("The day science begins to study non-physical phenomena, it will make more progress in one decade than in all the previous centuries of its existence.")
+        }
+        else if(x==31){
+            message.reply("Just as eating contrary to the clination is injurious to the health, so study without desire spoils the memory, and it retains nothing that it takes in.")
+        }
+        else if(x==32){
+            message.reply("Envy is the ulcer of the soul.")
+        }    
+        else if(x==33){
+            message.reply("When anything tempts you to feel bitter,not this is misfortune but to bear this worthly is good fortune.")
         }       
+        else if(x==34){
+            message.reply("If anyone tells you that a certain person speaks ill of you, do not make excuses about what is said of you. but respond : he was ignorant of my other faults else he would not have mentioned these alone")
+        }  
+        else if(x==35){
+            message.reply("Memory is everything, without it, we are blind, without it, we leave the fate of our world to chance.")
+        }
+        else if(x==36){
+            message.reply("Tell me and I forget, Show me and i remember, Involve me and I understand.")
+        }
         else{
             message.reply("The unexamined life is not worth living.")
         }
     }
     if(message.content=="!elecdate" && counter==true){
-        message.reply("Jan 18 : Workshop\nJan 31 : Homework\nFebr 1 : Workshop\nFeb 3 : Midterm 1 \nFeb 14 : Homework \nFeb 22 : Workshop \nMarch 7 : Homework \nMarch 10 : Workshop\nMarch 15 : Midterm 2 \nMarch 22 : Workshop\nApril 4 :Homework\nApril 5 : Workshop")
+        message.reply("Jan 18 : Workshop\nJan 31 : Homework\nFebr 1 : Workshop\nFeb 3 : Midterm 1 \nFeb 14 : Homework \nFeb 22 : Workshop \nMarch 7 : Homework \nMarch 10 : Workshop\nMarch 15 : Midterm 2 \nMarch 29 : Workshop\nApril 4 :Homework\nApril 7 : Workshop")
     }
     if(message.content=="!elechomework" && counter==true){
     
