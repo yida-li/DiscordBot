@@ -21,6 +21,9 @@ client.on("messageCreate",(message)=>{
         lock=false
     }    
     if(message.content=="!command" && counter==true ){
+        message.reply("!quote !schedule !rolldice")
+    }
+    if(message.content=="!oldcommand" && counter==true ){
         message.reply("!quote !elecmidterm !coen366 !elec311 !elecdate !elechomework !coen448 !coen490 !engl233 !schedule !manual !pod !lab")
     }
     if(message.content=="!coen366" && counter==true){
