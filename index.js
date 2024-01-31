@@ -70,6 +70,156 @@ client.on("messageCreate",(message)=>{
         }
 
     }
+    if(message.content=="!48laws" && counter==true){
+        let x = Math.floor(Math.random() * 47);
+        if(x==1){
+            message.reply("Law 1: Never outshine the master ")
+        }
+        else if(x==2){
+            message.reply("Law 2: Never put too much trust in friends, learn how to use enemies ")
+        }
+        else if(x==3){
+            message.reply("Law 3: Conceal Your Intentions ")
+        }
+        else if(x==4){
+            message.reply("Law 4: Always say less than necessary ")
+        }
+        else if(x==5){
+            message.reply("Law 5: So much depends on reputation, guard it with your life ")
+        }
+        else if(x==6){
+            message.reply("Law 6: Court attention at all costs ")
+        }
+        else if(x==7){
+            message.reply("Law 7: Get others to do the work for you, but always take the credit ")
+        }
+        else if(x==8){
+            message.reply("Law 8: Make other people come to you, use bait if necessary ")
+        }
+        else if(x==9){
+            message.reply("Law 9: Win through your actions, never through argument ")
+        }
+        else if(x==10){
+            message.reply("Law 10: Infection: Avoid the unhappy or the unlucky ")
+        }        
+        else if(x==11){
+            message.reply("Law 11: Learn to keep people dependent on you ")
+        }
+        else if(x==12){
+            message.reply("Law 12: Use selective honesty and generosity to disarm your victim ")
+        }
+        else if(x==13){
+            message.reply("Law 13: When asking for help, appeal to people’s self interest, never their mercy or gratitude ")
+        }
+        else if(x==14){
+            message.reply("Law 14: Pose as a friend, work as a spy ")
+        }          
+
+        else if(x==15){
+            message.reply("Law 15: Crush your enemy totally ")
+        }
+        else if(x==16){
+            message.reply("Law 16: Use absence to increase strength and honor ")
+        }
+        else if(x==17){
+            message.reply("Law 17: Keep others in suspended terror, cultivate an air of unpredictability ")
+        }
+        else if(x==18){
+            message.reply("Law 18: Do not build a fortress to protect yourself, isolation is dangerous ")
+        }
+        else if(x==19){
+            message.reply("Law 19: Know who you’re dealing with, do not offend the wrong person ")
+        }
+        else if(x==20){
+            message.reply("Law 20: Do not commit to anyone ")
+        }        
+        else if(x==21){
+            message.reply("Law 21: Play a sucker to catch a sucker, seem dumber than your mark ")
+        }
+        else if(x==22){
+            message.reply("Law 22: Use the surrender tactic: transform weakness into power ")
+        }
+        else if(x==23){
+            message.reply("Law 23: Concentrate your forces ")
+        }
+        else if(x==24){
+            message.reply("Law 24: Play the perfect courtier ")
+        }
+        else if(x==25){
+            message.reply("Law 25: Re-Create Yourself ")
+        }
+        else if(x==26){
+            message.reply("Law 26: Keep your hands clean ")
+        }
+        else if(x==27){
+            message.reply("Law 27: Play on people’s need to believe to create a cult like following ")
+        }
+        else if(x==28){
+            message.reply("Law 28: Enter action with boldness ")
+        }
+        else if(x==29){
+            message.reply("Law 29: Plan all the way to the end ")
+        }
+        else if(x==30){
+            message.reply("Law 30: Make your accomplishments seem effortless ")
+        }        
+        else if(x==31){
+            message.reply("Law 31: Control the options, get others to play with the cards you deal ")
+        }
+        else if(x==32){
+            message.reply("Law 32: Play to people’s fantasies ")
+        }
+        else if(x==33){
+            message.reply("Law 33: Discover each man’s thumbscrew ")
+        }
+        else if(x==34){
+            message.reply("Law 34: Be royal in your own fashion. Act like a king to be treated like one ")
+        }
+        else if(x==35){
+            message.reply("Law 35: Master the art of timing ")
+        }
+        else if(x==36){
+            message.reply("Law 36: Disdain things you cannot have, ignoring them is the best revenge ")
+        }
+        else if(x==37){
+            message.reply("Law 37: Create compelling spectacles ")
+        }
+        else if(x==38){
+            message.reply("Law 38: Think as you like but behave like others ")
+        }
+        else if(x==39){
+            message.reply("Law 39: Stir up waters to catch fish ")
+        }
+        else if(x==40){
+            message.reply("Law 40: Despise the free lunch ")
+        }        
+        else if(x==41){
+            message.reply("Law 41: Avoid stepping into a great man’s shoes ")
+        }
+        else if(x==42){
+            message.reply("Law 42: Strike the shepherd and the sheep will scatter ")
+        }
+        else if(x==43){
+            message.reply("Law 43: Work on the hearts and minds of others ")
+        }
+        else if(x==44){
+            message.reply("Law 44: Disarm and infuriate with the mirror effect ")
+        }
+        else if(x==45){
+            message.reply("Law 45: Preach the need to change, but never reform too much at once ")
+        }
+        else if(x==46){
+            message.reply("Law 46: Never appear too perfect ")
+        }
+        else if(x==47){
+            message.reply("Law 47: Do not go past the mark you aimed for. In victory, know when to stop ")
+        }        
+        else{
+            message.reply("Law 48: Assume formlessness")
+        }
+    }
+
+
     if(message.content=="!quote" && counter==true&& lock==true){
         let x = Math.floor(Math.random() * 38);
         if (x==0){
@@ -183,6 +333,10 @@ client.on("messageCreate",(message)=>{
         else if(x==36){
             message.reply("Tell me and I forget, Show me and i remember, Involve me and I understand.")
         }
+
+
+
+
         else{
             message.reply("The unexamined life is not worth living.")
         }
